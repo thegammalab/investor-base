@@ -1,6 +1,7 @@
 *.log
 wp-config.php
 old/
+wp-content/uploads/
 
 /.htaccess
 /license.txt
