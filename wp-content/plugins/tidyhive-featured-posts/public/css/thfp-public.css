@@ -1,0 +1,168 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+/* thfp-featured area */
+
+.featured-image {
+    background-color: #8c8c8c;
+}
+
+.thfp-feat__slider {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.thfp-feat__slider article {
+    /*height: 500px;*/
+}
+
+.thfp-feat__content {
+    height: 400px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thfp-feat__contentBox {
+    text-align: center;
+}
+
+.thfp-feat__slider .owl-dots {
+    display: block;
+    margin-top: -28px;
+    position: relative;
+    text-align: center;
+    z-index: 999;
+}
+
+.thfp-feat__slider .owl-dot {
+    display: inline-block;
+}
+
+.thfp-feat__slider .owl-dot > span {
+    background-color: #fff;
+    opacity: 0.35;
+    border-radius: 20px;
+    display: block;
+    height: 10px;
+    margin: 0 5px;
+    width: 10px;
+}
+
+.thfp-feat__slider .owl-dot.active span {
+    background-color: #FFF;
+    opacity: 1;
+}
+
+.thfp-entry__cat {
+    margin-bottom: 10px;
+}
+
+.thfp-entry__cat a {
+    color: #e1e1e1;
+}
+
+.thfp-entry__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.thfp-entry__title a {
+    color: #fff;
+}
+
+.thfp__item {
+    position: relative;
+    max-height: 400px;
+}
+
+.thfp-feat__content p {
+    margin-bottom: 20px;
+}
+
+.thfp-feat__slider .owl-nav > div {
+	position: absolute;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.thfp-feat__slider .owl-prev {
+    left: 30px;
+}
+
+.thfp-feat__slider .owl-next {
+    right: 30px;
+}
+
+.thfp-feat__slider .fa{
+	font-size: 30px;
+}
+
+.thfp-entry__button {
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.thfp__item::before {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+    .thfp-feat__slider > div {
+        border: none;
+    }
+    .thfp-feat__slider .owl-nav > div {
+        z-index: 100;
+        border: none;
+    }
+    .thfp-feat__slider .owl-nav .owl-prev {
+        left: 17px;
+    }
+    .thfp-feat__slider .owl-nav .owl-next {
+        right: 17px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .thfp-feat__content {
+        height: 300px;
+    }
+    .thfp-entry__title {
+        margin-bottom: 20px;
+    }
+    .thfp-feat__slider .owl-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .thfp-feat__content {
+        padding: 30px;
+        height: 200px;
+    }
+    .thfp-entry__cat {
+        display: none;
+    }
+    .thfp-entry__title a {
+        font-size: 20px;
+    }
+    .thfp-feat__content p,
+    .thfp-entry__button {
+        display: none;
+    }
+}

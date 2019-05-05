@@ -1,0 +1,248 @@
+.slick-arrow {
+  background: none;
+  border: none;
+  width: 30px !important;
+  padding: 0 15px !important;
+  overflow: hidden;
+  text-indent: 99999px;
+
+  &.slick-prev {
+    background: url("../images/previous-arrow.png") center no-repeat;
+  }
+
+  &.slick-next {
+    background: url("../images/next-arrow.png") center no-repeat;
+  }
+}
+
+.pagination_links {
+  text-align: center;
+
+  span {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0 2px;
+    background: #CCC;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 34px;
+    background: $theme_color1;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 90%;
+
+    &.dots {
+      color: #999;
+      background: none;
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0 2px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 34px;
+    color: #999;
+    font-weight: 500;
+    font-size: 90%;
+
+    &:hover {
+      background: $theme_color1;
+      color: #FFF;
+    }
+  }
+
+  img {
+    height: 16px;
+    width: auto;
+  }
+}
+
+#exchange_select {
+  width: 100%;
+  border: 2px solid #fff;
+  padding: 10px 15px;
+  background: #84dcc6;
+
+  .dropdown-menu,
+  .dropdown-toggle {
+    width: 100%;
+    border-radius: 0 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #FFF;
+    padding: 10px;
+    color: #333;
+    text-align: left;
+
+    img {
+      margin-right: 10px;
+      height: 15px;
+    }
+  }
+
+  .dropdown-toggle {
+    display: block;
+    position: relative;
+  }
+
+  .dropdown-menu {
+    width: calc(100% - 30px);
+    padding: 0 10px 10px;
+  }
+
+  .btn-group img {
+    margin-right: 10px;
+  }
+
+  .dropdown-toggle {
+    padding-right: 50px;
+
+    &:after {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  .dropdown-menu > li {
+    margin-bottom: 2px;
+
+    a {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+      line-height: 24px;
+      padding: 3px;
+    }
+  }
+
+  .dropdown-menu > li > a:hover {
+    background: #f1f9fd;
+  }
+  /* $search-blue */
+  .dropdown-header {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #ccc;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+#market_list th {
+  cursor: pointer;
+  position: relative;
+
+  div {
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      border: 4px solid transparent;
+      display: none;
+      margin-right: 10px;
+      margin-top: -2px;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &.sorting_asc {
+    div {
+      &:before {
+        display: block;
+        border-bottom-color: #000;
+      }
+    }
+  }
+
+  &.sorting_desc {
+    div {
+      &:before {
+        display: block;
+        border-top-color: #000;
+      }
+    }
+  }
+}
+
+.single-companies {
+  .organize_month {
+    margin-right: 0 !important;
+    padding-right: 20px !important;
+    background: #FFF !important;
+  }
+
+  #exchange_select {
+    width: 250px;
+    border: 0;
+    padding: 0;
+    background: none;
+
+    .dropdown-toggle {
+      background: none;
+    }
+
+    .dropdown-menu {
+      width: 100%;
+    }
+  }
+}
+
+.bar_chart {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  width: 80px;
+  display: flex;
+
+  li {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    padding: 0 2px;
+    margin: 0;
+
+    div {
+      position: absolute;
+      width: 98%;
+      margin: auto 1%;
+      height: 30px;
+      background: #F00;
+    }
+
+    &.pos {
+      div {
+        background: #7997ba;
+      }
+    }
+
+    &.neg {
+      div {
+        background: #cb3e3e;
+      }
+    }
+  }
+}

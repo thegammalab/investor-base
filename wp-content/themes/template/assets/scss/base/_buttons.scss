@@ -1,0 +1,57 @@
+.btn {
+  padding: 20px 35px;
+  @include text-style($font_family_1,81%,700,1,$white,uppercase);
+  display: inline-block;
+  text-decoration: none;
+  white-space: normal;
+  background: $theme_color1;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: $border-radius-lg;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $theme_color1;
+    background: darken($theme_color1,5%);
+    outline: none;
+  }
+}
+
+.btn-primary {
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background: darken($theme_color1,5%);
+    outline: none;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  white-space: normal;
+  background: $theme_color2;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: $border-radius-lg;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background: darken($theme_color2,5%);
+    outline: none;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background: $theme_color1;
+  border: none;
+}

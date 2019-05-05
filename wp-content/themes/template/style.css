@@ -1,0 +1,13 @@
+/*
+Theme Name:         Investor Base
+Theme URI:          http://www.thedesignfactory.ro/
+Description:        Custom theme created for Investor Base
+Version:            1.0.0
+Author:             thedesignfactory.ro
+Author URI:         http://www.thedesignfactory.ro/
+
+License:            MIT License
+License URI:        http://opensource.org/licenses/MIT
+*/
+
+@import url(get_bloginfo("template_directory")."/assets/css/style.css");

@@ -1,0 +1,56 @@
+<?php
+$items_subcats = array();
+$subcats = get_terms("prod_category","hide_empty=0&parent=".$cat->term_id);
+foreach($subcats as $subcat){
+  if(get_term_meta($subcat->term_id,"show_on_homepage",true)){
+    $items_subcats[]=$subcat;
+  }
+}
+ ?>
+<div class="header_bg">
+  <div class="header_pattern">
+    <div class="header_bullets">
+      <header class="">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="<?php echo get_bloginfo("url"); ?>">
+              <?php echo wp_get_attachment_image(get_option("options_top_logo"),"medium"); ?>
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="main_menu">
+              <?php
+              if (has_nav_menu('main_menu_header')) :
+                wp_nav_menu(array('theme_location' => 'main_menu_header', 'walker' => new TDF_Nav_Walker(), 'menu_class' => 'navbar-nav ', "depth" => 3));
+              endif;
+              ?>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <section class="page_hero">
+        <div class="container">
+          <div class="jumbotron text-center">
+            <h1>
+              <?php echo get_post_meta(get_the_ID(),"header_title",true); ?>
+            </h1>
+            <div class="row">
+              <?php foreach($items_subcats as $items_subcat){ ?>
+                <div class="col-lg-2 col-sm-4 col-6">
+                  <div class="working_money">
+                    <a href="<?=get_term_link($items_subcat); ?>" class="money_icon d-block">
+                      <?php echo wp_get_attachment_image(get_term_meta($items_subcat->term_id,"icon",true),"medium"); ?>
+                    </a>
+                    <h5><a href="<?=get_term_link($items_subcat); ?>" class="d-block"><?=get_term_meta($items_subcat->term_id,"tagline",true); ?></a></h5>
+                  </div>
+                </div>
+              <?php } ?>
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>

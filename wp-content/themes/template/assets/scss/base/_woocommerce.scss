@@ -1,0 +1,31 @@
+.form-row {
+  display: flex;
+
+  label {
+    flex: 2;
+  }
+
+  span {
+    flex: 3;
+  }
+}
+
+.woocommerce .col2-set,
+.woocommerce-page .col2-set {
+  margin: 0 -15px;
+}
+
+.woocommerce .col2-set .col-1,
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-1,
+.woocommerce-page .col2-set .col-2 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  padding: 0;
+  border: 0;
+}
